@@ -1,7 +1,7 @@
 # SVG Gauge
 Responsive SVG Gauge implemented in JavaScript and stylable with CSS
 
-![alt text](https://github.com/philrawlings/svg-gauge/blob/main/example.png?raw=true)
+![Example Gauge](https://github.com/philrawlings/svg-gauge/blob/main/example.png?raw=true)
 
 ## Usage
 
