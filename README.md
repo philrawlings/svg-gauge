@@ -17,6 +17,11 @@ Add Script at bottom of page (if referencing after page content loaded, see gaug
 <script src="/gauge.js"></script>
 ```
 
+Create a container for the gauge. Gauge will grow to fill the container, so will honour its sizing (if any):
+```html
+<div id="gauge-container"></div>
+```
+
 Create the gauge:
 
 ```javascript
