@@ -36,22 +36,22 @@
     stroke: white;
 }
 
-.gauge-major-text {
+.gauge-value-label {
     font-family: Arial, Helvetica, sans-serif;
     fill: #888;
     font-size: 0.10em;
     transform: translate(0px, 0.4em);
 }
 
-.gauge-major-text-left {
+.gauge-value-label-left {
     text-anchor: start;
 }
 
-.gauge-major-text-top {
+.gauge-value-label-top {
     text-anchor: middle;
 }
 
-.gauge-major-text-right {
+.gauge-value-label-right {
     text-anchor: end;
 }
 

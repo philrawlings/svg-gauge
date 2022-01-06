@@ -221,13 +221,13 @@ class Gauge {
         const gauge = this.container.querySelector(".svg-gauge > svg");
         const gaugeNeedle = this.container.querySelector(".svg-gauge .gauge-needle");
         const textElem = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        textElem.classList.add("gauge-major-text");
+        textElem.classList.add("gauge-value-label");
         if (textPos == "left")
-            textElem.classList.add("gauge-major-text-left");
+            textElem.classList.add("gauge-value-label-left");
         else if (textPos == "top")
-            textElem.classList.add("gauge-major-text-top");
+            textElem.classList.add("gauge-value-label-top");
         else if (textPos == "right")
-            textElem.classList.add("gauge-major-text-right");
+            textElem.classList.add("gauge-value-label-right");
     
         textElem.setAttribute("x", x);
         textElem.setAttribute("y", y);
