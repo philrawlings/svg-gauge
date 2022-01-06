@@ -1,19 +1,21 @@
 # SVG Gauge
- Responsive SVG Gauge implemented in JavaScript and stylable with CSS
+Responsive SVG Gauge implemented in JavaScript and stylable with CSS
 
- ## Usage
+![alt text](https://github.com/philrawlings/svg-gauge/blob/main/example.png?raw=true)
 
- Add stylesheet to head:
+## Usage
 
- ```html
- <link rel="stylesheet" href="/gauge.css">
- ```
+Add stylesheet to head:
 
- Add Script at bottom of page (if referencing after page content loaded, see gauge-test.htm as an example):
+```html
+<link rel="stylesheet" href="/gauge.css">
+```
 
- ```html
- <script src="/gauge.js"></script>
- ```
+Add Script at bottom of page (if referencing after page content loaded, see gauge-test.htm as an example):
+
+```html
+<script src="/gauge.js"></script>
+```
 
 Create the gauge:
 
@@ -37,12 +39,12 @@ const gauge = new Gauge(gaugeContainer, {
 });
 ```
 
- Add handler code to modify the value. For example:
+Add handler code to modify the value. For example:
 
- ```javascript
+```javascript
 document.querySelector("#gauge-value").addEventListener("change", event => {
     gauge.value = event.currentTarget.value;
 });
- ``` 
+``` 
 
 
