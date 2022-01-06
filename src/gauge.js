@@ -53,7 +53,7 @@ class Gauge {
         `
     }
 
-    #addSegment(start, end, segmentType) {
+    #addSegment(start, end, color) {
         const startPercent = ((start - this.min) / this.range) * 100;
         const endPercent = ((end - this.min) / this.range) * 100;;
         const percent = endPercent - startPercent;
@@ -66,11 +66,12 @@ class Gauge {
         const gaugeMajorTicks = this.container.querySelector(".svg-gauge .gauge-major-ticks");
         
         const segment = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        segment.classList.add(`gauge-segment-${segmentType}`);
+        segment.classList.add(`gauge-segment`);
         segment.setAttribute("cx", 20);
         segment.setAttribute("cy", 20);
         segment.setAttribute("r", 15.91549430918954);
         segment.setAttribute("fill", "transparent");
+        segment.setAttribute("stroke", color);
         gauge.insertBefore(segment, gaugeMajorTicks);
     
         segment.setAttribute("stroke-dashoffset", dashOffset);

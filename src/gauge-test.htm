@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
     
     <head>
         <title>Gauge Test</title>
@@ -38,11 +38,11 @@
                     majorTicks: [-500, -450, -400, -350, -300, -250, -200, -150, -100, -50, 0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500],
                     minorTicks: [-475, -425, -375, -325, -275, -225, -175, -125, -75, -25, 25, 75, 125, 175, 225, 275, 325, 375, 425, 475],
                     segments: [
-                        { start: -500, end: -400, type: "red" },
-                        { start: -400, end: -300, type: "yellow" },
-                        { start: -300, end: 300, type: "green" },
-                        { start: 300, end: 400, type: "yellow" },
-                        { start: 400, end: 500, type: "red" }
+                        { start: -500, end: -400, type: "rgb(255, 217, 217)" }, // red
+                        { start: -400, end: -300, type: "rgb(255, 255, 200)" }, // yellow
+                        { start: -300, end: 300, type: "rgb(191,255,191)" }, // green
+                        { start: 300, end: 400, type: "rgb(255, 255, 200)" }, // yellow
+                        { start: 400, end: 500, type: "rgb(255, 217, 217)" } // red
                     ],
                     label: "mmHg",
                     value: 0

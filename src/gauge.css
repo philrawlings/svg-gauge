@@ -13,19 +13,8 @@
     stroke: #EBEBEB;
 }
 
-.gauge-segment-red {
+.gauge-segment {
     stroke-width: 3.5;
-    stroke: rgb(255, 217, 217);
-}
-
-.gauge-segment-yellow {
-    stroke-width: 3.5;
-    stroke: rgb(255, 255, 200);
-}
-
-.gauge-segment-green {
-    stroke-width: 3.5;
-    stroke: rgb(191,255,191);
 }
 
 .gauge-segment-base {
