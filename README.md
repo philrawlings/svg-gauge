@@ -39,7 +39,8 @@ const gauge = new Gauge(gaugeContainer, {
         { start: 300, end: 400, type: "rgb(255, 255, 200)" }, // yellow
         { start: 400, end: 500, type: "rgb(255, 217, 217)" } // red
     ],
-    label: "mmHg",
+    centerLabel: "mmHg",
+    bottomLabel: "Pressure",
     value: 0
 });
 ```
