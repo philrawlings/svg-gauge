@@ -14,7 +14,12 @@ class Gauge {
         options.segments.forEach(segment => {
             this.#addSegment(segment.start, segment.end, segment.type);
         })
-        this.#setLabelText(options.label);
+        if (options.centerLabel) {
+            this.#setLabelText(options.centerLabel);
+        }
+        if (options.bottomLabel) {
+            this.#setBottomLabelText(options.bottomLabel);
+        }
         this.value = options.value;
     }
 
@@ -41,13 +46,18 @@ class Gauge {
                     stroke-width="3.5" stroke-dasharray="25 75" stroke-dashoffset="-12.5"></circle>
                 
                     <!-- Text -->
-                    <text class="gauge-text" y="60%" transform="translate(0, 2)" style="display:none">
-                        <tspan x="50%" class="gauge-label"></tspan>   
+                    <text class="gauge-center-text" y="60%" transform="translate(0, 2)" style="display:none">
+                        <tspan x="50%" class="gauge-center-label"></tspan>   
                     </text>
                     
                     <!-- Needle -->
                     <line class="gauge-needle" x1="20" y1="20" x2="20" y2="4.08450569081046" />
                     <circle class="gauge-centre" cx="20" cy="20" r="1.5" fill="#eee" stroke="#ccc" stroke-width="0.1"></circle>
+
+                    <!-- Text -->
+                    <text class="gauge-bottom-text" y="60%" transform="translate(0, 11)" style="display:none">
+                    <tspan x="50%" class="gauge-bottom-label"></tspan>   
+                    </text>
                 </svg>
             </div>
         `
@@ -90,8 +100,13 @@ class Gauge {
     }
     
     #setLabelText(labelText) {
-        this.container.querySelector(".gauge-label").innerHTML = labelText;
-        this.container.querySelector(".gauge-text").style.display = "unset";
+        this.container.querySelector(".gauge-center-label").innerHTML = labelText;
+        this.container.querySelector(".gauge-center-text").style.display = "unset";
+    }
+
+    #setBottomLabelText(labelText) {
+        this.container.querySelector(".gauge-bottom-label").innerHTML = labelText;
+        this.container.querySelector(".gauge-bottom-text").style.display = "unset";
     }
     
     #drawValues(values) {

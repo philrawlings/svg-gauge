@@ -58,14 +58,25 @@
     stroke-width: 0.6px;
 }
 
-.gauge-text {
+.gauge-center-text {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.gauge-label {
+.gauge-center-label {
     font-size: 0.15em;
     line-height: 1;
-    transform: translateY(0.5em);
+    text-align: center;
+    text-anchor: middle;
+    fill: #aaa;
+}
+
+.gauge-bottom-text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gauge-bottom-label {
+    font-size: 0.16em;
+    line-height: 1;
     text-align: center;
     text-anchor: middle;
     fill: #aaa;
